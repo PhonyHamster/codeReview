@@ -1,0 +1,181 @@
+/*
+ * Difr
+ * Copyright (C) 2013  Wilfred Springer
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+body {
+    font-family: HelveticaNeue, Helvetica, Arial, sans;
+    font-size: 13px;
+}
+
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.diff {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    overflow: hidden;
+    -ms-overflow-x: auto;
+    overflow-x: auto;
+    font-family: Monaco, Courier, mono;
+    font-size: 13px;
+}
+
+.diff table {
+    border-collapse:collapse;
+    width: 100%;
+}
+
+.diff pre {
+    font-family: Monaco, Courier, mono;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+tr.meta {
+    background-color: #eee;
+    color: #666;
+}
+
+tr.meta .file {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.lineno {
+    width: 30px;
+    border-right: 1px solid #cccccc;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: right;
+    height: 20px;
+    color: #999;
+}
+
+.chunk {
+    background-color: #f8f8ff;
+    color: #888;
+}
+
+.chunk .lineno {
+    background-color: #f3f3ff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-left: #e4e4ff;
+}
+
+.added {
+    background-color: #ddffdd;
+}
+
+.removed {
+    background-color: #ffdddd;
+}
+
+.line.added .lineno {
+    background-color: #ceffce;
+    border-right: 1px solid #b4e2b4;
+}
+
+.line.removed .lineno {
+    background-color: #f7c8c8;
+    border-right: 1px solid #e9aeae;
+}
+
+.comments {
+    background-color: #777;
+    color: #f0f0f0;
+}
+
+.comments td {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contents {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 500px;
+    height: 80px;
+    background-color: #f3f3f3;
+    padding: 6px;
+    font-family: HelveticaNeue, Helvetica, Arial, sans;
+    font-size: 13px;
+    color: #333;
+}
+
+input:focus, textarea { outline: none !important; }
+
+.line:hover {
+    background-color: #f8eec7;
+}
+
+.line:hover .lineno, .line:hover.added .lineno, .line:hover.removed .lineno {
+    background-color: #f8eec7;
+}
+
+.editor #contents {
+    display: inline-block;
+}
+
+.editor .cancel {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
+.cancel {
+    height: 14px;
+    width: 14px;
+    display: block;
+    background: url('cancel.png') top;
+    background-repeat: no-repeat;
+}
+
+.cancel:hover {
+    background-position: 0 -16px;
+}
+
+.line:hover.added .lineno {
+    border-right: 1px solid #cccccc;
+}
+
+.line:hover.removed .lineno {
+    border-right: 1px solid #cccccc;
+}
+
+.editor {
+    background-color: #777;
+    -moz-box-shadow: inset 1px 2px 4px 1px #3a3a3a;
+    -webkit-box-shadow: inset 1px 2px 4px 1px #3a3a3a;
+    box-shadow: inset 1px 2px 4px 1px #555;
+}
+
+.editor .form {
+    display: none;
+}
